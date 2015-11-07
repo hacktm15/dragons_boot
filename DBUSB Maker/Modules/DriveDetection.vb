@@ -6,13 +6,14 @@
     Public DriveSize(30) As String
     Public DriveInterfaceType(30) As String
     Public DriveMediaType(30) As String
-
+    Public DrivePartitions(30) As String
     ' Selected Drive Info
     Public SelectedDriveIndex As String
     Public SelectedDriveCaption As String
     Public SelectedDriveSize As String
     Public SelectedDriveInterfaceType As String
     Public SelectedDriveMediaType As String
+    Public SelectedDrivePartitions As String
 
     ' Detects all removable storage devices and lists them in the selection window.
     Public Sub Detect()
@@ -53,12 +54,27 @@
 
             End If
 
+            Dim strDeviceID As String = "\\.\PHYSICALDRIVE" & DriveIndex(Drive.Index)
+            Dim VolumesLetters As String = ""
+            Dim wmiServices = GetObject("winmgmts:{impersonationLevel=Impersonate}!//" & ".")
+            Dim wmiDiskPartitions = wmiServices.ExecQuery("ASSOCIATORS OF {Win32_DiskDrive.DeviceID='" & strDeviceID & "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition")
+            For Each wmiDiskPartition In wmiDiskPartitions
+                Dim wmiLogicalDisks = wmiServices.ExecQuery("ASSOCIATORS OF {Win32_DiskPartition.DeviceID='" & wmiDiskPartition.DeviceID & "'} WHERE AssocClass = Win32_LogicalDiskToPartition")
+                For Each wmiLogicalDisk In wmiLogicalDisks
+                    VolumesLetters = VolumesLetters & wmiLogicalDisk.DeviceID & "\ "
+
+                Next
+                DrivePartitions(Drive.Index) = VolumesLetters
+            Next
+
+
             ' Add them to the list
             DBUSBMaker.cob_RemovableDrives.Items.Add("(#" & DriveIndex(Drive.Index) & ")  " & (Drive.Caption(Drive.Index) & "           ").ToString.Substring(0, 10) & " - " & DriveSize(Drive.Index).PadLeft(10, " "))
-            NrDrives += 1
-        Next
-        colDrives = Nothing
+                NrDrives += 1
+            Next
+            colDrives = Nothing
         objWMIService = Nothing
+
 
         If NrDrives > 0 Then
             DBUSBMaker.cob_RemovableDrives.Enabled = True
@@ -67,6 +83,7 @@
             DBUSBMaker.b_FormatDrive.Enabled = True
             DBUSBMaker.b_Qemu.Enabled = True
         Else
+            ' If no device is selcted, block the QEMU and Format Buttons
             DBUSBMaker.cob_RemovableDrives.Enabled = False
             DBUSBMaker.pb_CurrentDevice.Image = My.Resources.Ico_NotFound
             DBUSBMaker.b_FormatDrive.Enabled = False
@@ -76,6 +93,7 @@
             DBUSBMaker.L_DriveIndex.Text = "<N/A>"
             DBUSBMaker.L_DriveInterfaceType.Text = "<N/A>"
             DBUSBMaker.L_DriveMediaType.Text = "<N/A>"
+            DBUSBMaker.L_DrivePartitions.Text = "<N/A>"
         End If
 
     End Sub

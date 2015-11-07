@@ -71,12 +71,32 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Gif_Loading() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Gif_Loading", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
         Friend ReadOnly Property grldr() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("grldr", resourceCulture)
                 Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property Ico_DBUSB() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ico_DBUSB", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         
@@ -126,6 +146,16 @@ Namespace My.Resources
         Friend ReadOnly Property Ico_Help() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Ico_Help", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Ico_Main() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ico_Main", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -196,6 +226,16 @@ Namespace My.Resources
         Friend ReadOnly Property Ico_USB1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Ico_USB1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Ico_VM() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ico_VM", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

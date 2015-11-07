@@ -1,4 +1,7 @@
-﻿Public Module QEMU_Fbinst
+﻿Imports System.IO
+Imports System.IO.Compression
+
+Public Module QEMU_Fbinst
 
     ' File Streams for copying
     Dim TempPath As String = IO.Path.GetTempPath()
@@ -53,7 +56,7 @@
     End Sub
 
     Public Sub Run_Fbinst(ByRef SelectedDriveIndex)
-        Dim response As Integer = MsgBox("WARNING!!!" & vbCrLf & "Formatting will cause all data on the device to be lost. Are you sure you want to format drive " & SelectedDriveIndex & "?", MsgBoxStyle.YesNo, "Formatting Propmpt")
+        Dim response As Integer = MsgBox("WARNING!!!" & vbCrLf & "Formatting will cause all data on the device to be lost. Are you sure you want to format drive " & SelectedDriveIndex & "?", MsgBoxStyle.YesNo, "Formatting Prompt")
         If response = MsgBoxResult.Yes Then
             ' Copy necessary files to temp
             My.Computer.FileSystem.CreateDirectory(TempPath + "DBUSB\Maker\Fbinst\")
@@ -122,13 +125,21 @@
             Dim GrldrCommand As String = "fbinst (hd" & SelectedDriveIndex & ") add grldr grldr"
             Dim MenuCommand As String = "fbinst (hd" & SelectedDriveIndex & ") add-menu fb.cfg fb.txt"
 
-            ' Format the Device
-            Shell("cmd.exe /c " & TempPath.Substring(0, 2) & " & cd %temp%\DBUSB\Maker\Fbinst & " & FormatCommand & " & " & GrldrCommand & " & " & MenuCommand, AppWinStyle.Hide, True)
+            ' Please wait...
+            DBUSBMaker.Enabled = False
+
+            Shell("cmd.exe /c " & TempPath.Substring(0, 2) & " & cd %temp%\DBUSB\Maker\Fbinst & " & FormatCommand & " & " & GrldrCommand & " & " & MenuCommand, AppWinStyle.Hide, True, 3000)
+
+            MsgBox("Done!")
+            DBUSBMaker.Enabled = True
+
 
             ' Create Default Folders
             'My.Computer.FileSystem.CreateDirectory(DriveLetter + "DBUSB\IMAGES\Menus")
-            MsgBox("Done!")
+
 
         End If
     End Sub
+
+
 End Module

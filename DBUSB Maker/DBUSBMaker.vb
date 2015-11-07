@@ -37,6 +37,7 @@
         SelectedDriveSize = DriveSize(DriveListIndex)
         SelectedDriveInterfaceType = DriveInterfaceType(DriveListIndex)
         SelectedDriveMediaType = DriveMediaType(DriveListIndex)
+        SelectedDrivePartitions = DrivePartitions(DriveListIndex)
 
         If SelectedDriveCaption.Length() > 19 Then
             L_DriveLabel.Text = SelectedDriveCaption.Substring(0, 19)
@@ -48,6 +49,7 @@
         L_DriveIndex.Text = SelectedDriveIndex
         L_DriveMediaType.Text = SelectedDriveMediaType
         L_DriveInterfaceType.Text = SelectedDriveInterfaceType
+        L_DrivePartitions.Text = SelectedDrivePartitions
 
         If L_DriveInterfaceType.Text.Contains("USB") Then
             pb_CurrentDevice.Image = My.Resources.Ico_USB
@@ -109,7 +111,7 @@
         DriveDetection.Detect()
     End Sub
 
-    '--------------------------------------- FORMATTING AND QEMU -----------------------------------------------------------------
+    '--------------------------------------- FORMATTING AND QEMU -----------------------------------------------------
     Private Sub b_FormatDrive_Click(sender As Object, e As EventArgs) Handles b_FormatDrive.Click
         QEMU_Fbinst.Run_Fbinst(SelectedDriveIndex)
     End Sub
@@ -117,11 +119,5 @@
     Private Sub b_Qemu_Click(sender As Object, e As EventArgs) Handles b_Qemu.Click
         QEMU_Fbinst.Run_Qemu(SelectedDriveIndex)
     End Sub
-
-    Private Sub pb_CurrentDevice_BackgroundImageChanged(sender As Object, e As EventArgs) Handles pb_CurrentDevice.BackgroundImageChanged
-        MsgBox("Yo")
-    End Sub
-
-    ' If no device is selcted, block the QEMU and Format Buttons
 
 End Class

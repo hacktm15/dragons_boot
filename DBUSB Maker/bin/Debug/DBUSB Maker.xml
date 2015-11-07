@@ -27,9 +27,19 @@ DBUSB Maker
   Looks up a localized resource of type System.Byte[].
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Gif_Loading">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.grldr">
 <summary>
   Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_DBUSB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Exit">
@@ -53,6 +63,11 @@ DBUSB Maker
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Help">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Main">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -88,6 +103,11 @@ DBUSB Maker
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_USB1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_VM">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
