@@ -61,6 +61,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to color black/light-gray white/black light-gray/black light-gray/black
+        '''timeout 30
+        '''default 2
+        '''
+        '''title BOOT FROM HARD DISK
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title     ¯ Boot Windows (AUTO)\n
+        '''find --set-root --ignore-floppies --ignore-cd /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr || rootnoverify (hd0) &amp;&amp; chainloader +1 &amp;&amp; boot
+        '''map () (hd0) &amp;&amp; map (hd0) () &amp;&amp; map --rehook
+        '''find --set-root --devices=h /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr
+        '''chainloader /bootmgr || chainloa [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property BootLST() As String
+            Get
+                Return ResourceManager.GetString("BootLST", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
         Friend ReadOnly Property fbinstExe() As Byte()
@@ -241,21 +264,51 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to default 2
+        '''  Looks up a localized string similar to color black/light-gray white/black light-gray/black light-gray/black
         '''timeout 30
+        '''default 5
         '''
-        '''title DBUSB - MAIN MENU
+        '''title DBUSB - Main Menu
         '''root
         '''
-        '''title    &gt;&gt; Shutdown
-        '''halt
+        '''title
+        '''root
         '''
-        '''title    &gt;&gt; Restart \n\nLoool
-        '''reboot.
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title     Power Options
+        '''root
+        '''
+        '''title     ¯ Boot Manager ...\n\n Allows you to choose a Hard Disk and/or partition to boot from ...
+        '''configfile /DBUSB/IMAGES/Menus/Boot.LST
+        '''
+        '''title     ¯ Restart System ...\n\n Restart System ...
+        '''reboot
+        '''
+        '''title     ¯ Shutdown S [rest of string was truncated]&quot;;.
         '''</summary>
-        Friend ReadOnly Property Menu() As String
+        Friend ReadOnly Property MenuLST() As String
             Get
-                Return ResourceManager.GetString("Menu", resourceCulture)
+                Return ResourceManager.GetString("MenuLST", resourceCulture)
             End Get
         End Property
         

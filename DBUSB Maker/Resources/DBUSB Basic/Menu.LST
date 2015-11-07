@@ -1,0 +1,54 @@
+color black/light-gray white/black light-gray/black light-gray/black
+timeout 30
+default 14
+
+title DBUSB - Main Menu
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title     Power Options
+root
+
+title     >> Boot Manager ...\n\n Allows you to choose a Hard Disk and/or partition to boot from ...
+configfile /DBUSB/IMAGES/Boot.LST
+
+title     >> Restart System ...\n\n Restart System ...
+reboot
+
+title     >> Shutdown System ...\n\n Shutdown System ...
+halt

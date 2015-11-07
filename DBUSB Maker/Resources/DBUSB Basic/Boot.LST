@@ -1,0 +1,97 @@
+color black/light-gray white/black light-gray/black light-gray/black
+timeout 30
+default 2
+
+title BOOT FROM HARD DISK
+root
+
+title
+root
+
+title     >> Boot Windows (AUTO)\n
+find --set-root --ignore-floppies --ignore-cd /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr || rootnoverify (hd0) && chainloader +1 && boot
+map () (hd0) && map (hd0) () && map --rehook
+find --set-root --devices=h /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr
+chainloader /bootmgr || chainloader /ntldr
+
+title     >> Boot Windows (NTLDR)\n
+find --set-root --ignore-floppies --ignore-cd /ntldr
+map () (hd0)
+map (hd0) ()
+map --rehook
+find --set-root --ignore-floppies --ignore-cd /ntldr
+chainloader /ntldr
+savedefault
+
+title     >> Boot Windows (BOOTMGR)\n
+find --set-root --ignore-floppies --ignore-cd /bootmgr
+map () (hd0)
+map (hd0) ()
+map --rehook
+find --set-root --ignore-floppies --ignore-cd /bootmgr
+chainloader /bootmgr
+savedefault
+
+title
+root
+
+title     >> Boot HDD 1 MBR\n
+rootnoverify (hd0)
+chainloader +1
+title     >> Boot HDD 1 Partition 1\n
+rootnoverify (hd0,0)
+chainloader +1
+title     >> Boot HDD 1 Partition 2\n
+rootnoverify (hd0,1)
+chainloader +1
+title     >> Boot HDD 1 Partition 3\n
+rootnoverify (hd0,2)
+chainloader +1
+title     >> Boot HDD 1 Partition 4\n
+rootnoverify (hd0,3)
+chainloader +1
+
+title
+root
+
+title     >> Boot HDD 2 MBR\n
+rootnoverify (hd1)
+chainloader +1
+title     >> Boot HDD 2 Partition 1\n
+rootnoverify (hd1,0)
+chainloader +1
+title     >> Boot HDD 2 Partition 2\n
+rootnoverify (hd1,1)
+chainloader +1
+title     >> Boot HDD 2 Partition 3\n
+rootnoverify (hd1,2)
+chainloader +1
+title     >> Boot HDD 2 Partition 4\n
+rootnoverify (hd1,3)
+chainloader +1
+
+title
+root
+
+title     >> Boot HDD 3 MBR\n
+rootnoverify (hd2)
+chainloader +1
+title     >> Boot HDD 3 Partition 1\n
+rootnoverify (hd2,0)
+chainloader +1
+title     >> Boot HDD 3 Partition 2\n
+rootnoverify (hd2,1)
+chainloader +1
+title     >> Boot HDD 3 Partition 3\n
+rootnoverify (hd2,2)
+chainloader +1
+title     >> Boot HDD 3 Partition 4\n
+rootnoverify (hd2,3)
+chainloader +1
+
+title
+root
+
+title     >> Back to Main Menu\n                                                                                 Returns you to the main menu ...
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/MENU.LST
+configfile /DBUSB/IMAGES/Menu.LST

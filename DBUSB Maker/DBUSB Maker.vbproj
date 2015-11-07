@@ -123,7 +123,6 @@
     </None>
     <None Include="App.config" />
     <None Include="Resources\Fbinst\grldr" />
-    <None Include="Resources\Menu.LST" />
     <None Include="Resources\Qemu\bios.bin" />
     <None Include="Resources\Qemu\vgabios.bin" />
   </ItemGroup>
@@ -136,6 +135,8 @@
     <None Include="Resources\Icons\16x16 - USBICO.png" />
     <None Include="Resources\Icons\DBUSB.ico" />
     <None Include="Resources\Icons\Gif_Loading.gif" />
+    <None Include="Resources\DBUSB Basic\Boot.LST" />
+    <None Include="Resources\DBUSB Basic\Menu.LST" />
     <Content Include="Resources\Icons\Ico_Exit.png" />
     <None Include="Resources\Icons\Ico_Format.png" />
     <None Include="Resources\Icons\Ico_Help.png" />

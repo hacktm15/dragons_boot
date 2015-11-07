@@ -1,5 +1,5 @@
-﻿Imports System.IO
-Imports System.IO.Compression
+﻿Imports System
+Imports System.IO
 
 Public Module QEMU_Fbinst
 
@@ -56,6 +56,14 @@ Public Module QEMU_Fbinst
     End Sub
 
     Public Sub Run_Fbinst(ByRef SelectedDriveIndex)
+        ' Is it different?
+
+        If Application.ExecutablePath.Substring(0, 3) = SelectedDrivePartitions.Substring(0, 3) Then
+            MsgBox("You cannot format this drive because DBUSB Maker runs from it. Choose another drive, or move the application to another drive and retry.")
+            Exit Sub
+        End If
+
+        ' Warn about data loss!
         Dim response As Integer = MsgBox("WARNING!!!" & vbCrLf & "Formatting will cause all data on the device to be lost. Are you sure you want to format drive " & SelectedDriveIndex & "?", MsgBoxStyle.YesNo, "Formatting Prompt")
         If response = MsgBoxResult.Yes Then
             ' Copy necessary files to temp
@@ -128,16 +136,16 @@ Public Module QEMU_Fbinst
             ' Please wait...
             DBUSBMaker.Enabled = False
 
-            Shell("cmd.exe /c " & TempPath.Substring(0, 2) & " & cd %temp%\DBUSB\Maker\Fbinst & " & FormatCommand & " & " & GrldrCommand & " & " & MenuCommand, AppWinStyle.Hide, True, 3000)
+            Shell("cmd.exe /c " & TempPath.Substring(0, 2) & " & cd %temp%\DBUSB\Maker\Fbinst & " & FormatCommand & " & " & GrldrCommand & " & " & MenuCommand, AppWinStyle.Hide, True)
+
+            ' Create Default Folders
+            Shell("cmd.exe /c " & SelectedDrivePartitions.Substring(0, 2) & " & mkdir DBUSB\IMAGES", AppWinStyle.Hide, True)
+
+            IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Menu.lst", My.Resources.MenuLST)
+            IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Boot.lst", My.Resources.BootLST)
 
             MsgBox("Done!")
             DBUSBMaker.Enabled = True
-
-
-            ' Create Default Folders
-            'My.Computer.FileSystem.CreateDirectory(DriveLetter + "DBUSB\IMAGES\Menus")
-
-
         End If
     End Sub
 
