@@ -1,0 +1,11 @@
+default 2
+timeout 30
+
+title DBUSB - MAIN MENU
+root
+
+title    >> Shutdown
+halt
+
+title    >> Restart \n\nLoool
+reboot

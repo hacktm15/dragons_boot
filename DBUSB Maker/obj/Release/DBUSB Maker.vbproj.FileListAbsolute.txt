@@ -1,0 +1,15 @@
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Release\DBUSB Maker.exe.config
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Release\DBUSB Maker.exe
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Release\DBUSB Maker.pdb
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Release\DBUSB Maker.xml
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB_Maker.DBSUBMaker.resources
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB_Maker.Resources.resources
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB Maker.vbproj.GenerateResource.Cache
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB Maker.exe
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB Maker.xml
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB Maker.pdb
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Release\DBUSB Maker.vbprojResolveAssemblyReference.cache
+D:\Files\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.exe.config
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.exe
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.xml
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.pdb

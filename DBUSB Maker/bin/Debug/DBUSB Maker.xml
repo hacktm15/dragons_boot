@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DBUSB Maker
+</name>
+</assembly>
+<members>
+<member name="T:DBUSB_Maker.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.fbinstExe">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.grldr">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Menu">
+<summary>
+  Looks up a localized string similar to default 2
+timeout 30
+
+title DBUSB - MAIN MENU
+root
+
+title    &gt;&gt; Shutdown
+halt
+
+title    &gt;&gt; Restart \n\nLoool
+reboot.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.qemuBiosBin">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.qemuQemuExe">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.qemuVgabiosBin">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,26 @@
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Debug\DBUSB Maker.exe.config
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Debug\DBUSB Maker.exe
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Debug\DBUSB Maker.pdb
+D:\Files\Programming\Experiments\DBUSB Maker\bin\Debug\DBUSB Maker.xml
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB Maker.vbprojResolveAssemblyReference.cache
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB_Maker.Resources.resources
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB Maker.vbproj.GenerateResource.Cache
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB Maker.exe
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB Maker.xml
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB Maker.pdb
+D:\Files\Programming\Experiments\DBUSB Maker\obj\Debug\DBUSB_Maker.DBSUBMaker.resources
+D:\DBUSB Maker\bin\Debug\DBUSB Maker.exe.config
+D:\DBUSB Maker\obj\Debug\DBUSB Maker.exe
+D:\DBUSB Maker\obj\Debug\DBUSB Maker.xml
+D:\DBUSB Maker\obj\Debug\DBUSB Maker.pdb
+D:\DBUSB Maker\bin\Debug\DBUSB Maker.exe
+D:\DBUSB Maker\bin\Debug\DBUSB Maker.pdb
+D:\DBUSB Maker\bin\Debug\DBUSB Maker.xml
+D:\DBUSB Maker\obj\Debug\DBUSB Maker.vbprojResolveAssemblyReference.cache
+D:\DBUSB Maker\obj\Debug\DBUSB_Maker.DBSUBMaker.resources
+D:\DBUSB Maker\obj\Debug\DBUSB_Maker.Resources.resources
+D:\DBUSB Maker\obj\Debug\DBUSB Maker.vbproj.GenerateResource.Cache
+D:\Drive\Programming\DBUSB Maker\bin\Debug\DBUSB Maker.exe.config
+D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.exe
+D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.xml
+D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.pdb
