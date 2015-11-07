@@ -32,7 +32,37 @@ DBUSB Maker
   Looks up a localized resource of type System.Byte[].
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Exit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Format">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_HDD">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_HDD1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Help">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Manual">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Notepad">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -42,7 +72,22 @@ DBUSB Maker
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Refresh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Test">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_USB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_USB1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

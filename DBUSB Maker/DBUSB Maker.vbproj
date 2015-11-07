@@ -134,6 +134,14 @@
     <None Include="Resources\Icons\Ico_HDD.png" />
     <None Include="Resources\Icons\Ico_NotFound.png" />
     <None Include="Resources\Icons\Ico_USB.png" />
+    <None Include="Resources\Icons\16x16 - USBICO.png" />
+    <Content Include="Resources\Icons\Ico_Exit.png" />
+    <None Include="Resources\Icons\Ico_Format.png" />
+    <None Include="Resources\Icons\Ico_Help.png" />
+    <None Include="Resources\Icons\Ico_Manual.png" />
+    <None Include="Resources\Icons\Ico_Notepad.png" />
+    <None Include="Resources\Icons\Ico_Refresh.png" />
+    <None Include="Resources\Icons\Ico_Test.png" />
     <Content Include="Resources\Qemu\qemu.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -56,16 +56,16 @@ Partial Class DBUSBMaker
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gr_GRUBEditor = New System.Windows.Forms.GroupBox()
-        Me.TabControl_GRUB = New System.Windows.Forms.TabControl()
-        Me.Menus = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.L_MenusOnDrive = New System.Windows.Forms.Label()
+        Me.cob_MenusOnDrive = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.gb_C = New System.Windows.Forms.GroupBox()
         Me.gb_Format.SuspendLayout()
         Me.gb_Qemu.SuspendLayout()
         Me.gb_Devices.SuspendLayout()
         CType(Me.pb_CurrentDevice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip.SuspendLayout()
         Me.gr_GRUBEditor.SuspendLayout()
-        Me.TabControl_GRUB.SuspendLayout()
         Me.SuspendLayout()
         '
         'b_Qemu
@@ -159,6 +159,8 @@ Partial Class DBUSBMaker
         'b_FormatDrive
         '
         Me.b_FormatDrive.Enabled = False
+        Me.b_FormatDrive.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Format
+        Me.b_FormatDrive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.b_FormatDrive.Location = New System.Drawing.Point(6, 112)
         Me.b_FormatDrive.Name = "b_FormatDrive"
         Me.b_FormatDrive.Size = New System.Drawing.Size(202, 23)
@@ -356,6 +358,7 @@ Partial Class DBUSBMaker
         '
         'RescanDrivesToolStripMenuItem
         '
+        Me.RescanDrivesToolStripMenuItem.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Refresh
         Me.RescanDrivesToolStripMenuItem.Name = "RescanDrivesToolStripMenuItem"
         Me.RescanDrivesToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
         Me.RescanDrivesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
@@ -363,6 +366,7 @@ Partial Class DBUSBMaker
         '
         'ExitToolStripMenuItem
         '
+        Me.ExitToolStripMenuItem.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Exit
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
@@ -392,14 +396,18 @@ Partial Class DBUSBMaker
         '
         'ManualToolStripMenuItem
         '
+        Me.ManualToolStripMenuItem.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Help
         Me.ManualToolStripMenuItem.Name = "ManualToolStripMenuItem"
         Me.ManualToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.ManualToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.ManualToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ManualToolStripMenuItem.Text = "Manual"
         '
         'gr_GRUBEditor
         '
-        Me.gr_GRUBEditor.Controls.Add(Me.TabControl_GRUB)
+        Me.gr_GRUBEditor.Controls.Add(Me.gb_C)
+        Me.gr_GRUBEditor.Controls.Add(Me.Button1)
+        Me.gr_GRUBEditor.Controls.Add(Me.cob_MenusOnDrive)
+        Me.gr_GRUBEditor.Controls.Add(Me.L_MenusOnDrive)
         Me.gr_GRUBEditor.Location = New System.Drawing.Point(233, 35)
         Me.gr_GRUBEditor.Name = "gr_GRUBEditor"
         Me.gr_GRUBEditor.Size = New System.Drawing.Size(604, 415)
@@ -407,36 +415,44 @@ Partial Class DBUSBMaker
         Me.gr_GRUBEditor.TabStop = False
         Me.gr_GRUBEditor.Text = "GRUB Menu Editor"
         '
-        'TabControl_GRUB
+        'L_MenusOnDrive
         '
-        Me.TabControl_GRUB.Controls.Add(Me.Menus)
-        Me.TabControl_GRUB.Controls.Add(Me.TabPage2)
-        Me.TabControl_GRUB.Location = New System.Drawing.Point(6, 214)
-        Me.TabControl_GRUB.Name = "TabControl_GRUB"
-        Me.TabControl_GRUB.SelectedIndex = 0
-        Me.TabControl_GRUB.Size = New System.Drawing.Size(583, 191)
-        Me.TabControl_GRUB.TabIndex = 0
+        Me.L_MenusOnDrive.AutoSize = True
+        Me.L_MenusOnDrive.Location = New System.Drawing.Point(6, 21)
+        Me.L_MenusOnDrive.Name = "L_MenusOnDrive"
+        Me.L_MenusOnDrive.Size = New System.Drawing.Size(102, 13)
+        Me.L_MenusOnDrive.TabIndex = 0
+        Me.L_MenusOnDrive.Text = "Menus on this drive:"
         '
-        'Menus
+        'cob_MenusOnDrive
         '
-        Me.Menus.Location = New System.Drawing.Point(4, 22)
-        Me.Menus.Name = "Menus"
-        Me.Menus.Padding = New System.Windows.Forms.Padding(3)
-        Me.Menus.Size = New System.Drawing.Size(575, 165)
-        Me.Menus.TabIndex = 0
-        Me.Menus.Text = "Menus"
-        Me.Menus.ToolTipText = "Collection of menus present on the current device."
-        Me.Menus.UseVisualStyleBackColor = True
+        Me.cob_MenusOnDrive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cob_MenusOnDrive.FormattingEnabled = True
+        Me.cob_MenusOnDrive.Location = New System.Drawing.Point(114, 19)
+        Me.cob_MenusOnDrive.Name = "cob_MenusOnDrive"
+        Me.cob_MenusOnDrive.Size = New System.Drawing.Size(121, 21)
+        Me.cob_MenusOnDrive.TabIndex = 1
         '
-        'TabPage2
+        'Button1
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(575, 165)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Color Editor"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.Button1.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Notepad
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(241, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(49, 24)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Edit"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'gb_C
+        '
+        Me.gb_C.Location = New System.Drawing.Point(9, 79)
+        Me.gb_C.Name = "gb_C"
+        Me.gb_C.Size = New System.Drawing.Size(200, 247)
+        Me.gb_C.TabIndex = 3
+        Me.gb_C.TabStop = False
+        Me.gb_C.Text = "Menu Colors"
         '
         'DBUSBMaker
         '
@@ -460,7 +476,7 @@ Partial Class DBUSBMaker
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.gr_GRUBEditor.ResumeLayout(False)
-        Me.TabControl_GRUB.ResumeLayout(False)
+        Me.gr_GRUBEditor.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -488,9 +504,6 @@ Partial Class DBUSBMaker
     Friend WithEvents AllowDiskDrivesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManualToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents gr_GRUBEditor As GroupBox
-    Friend WithEvents TabControl_GRUB As TabControl
-    Friend WithEvents Menus As TabPage
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents pb_CurrentDevice As PictureBox
     Friend WithEvents cob_RemovableDrives As ComboBox
     Friend WithEvents L_Index As Label
@@ -503,4 +516,8 @@ Partial Class DBUSBMaker
     Friend WithEvents L_DriveIndex As Label
     Friend WithEvents L_DriveSize As Label
     Friend WithEvents L_DriveLabel As Label
+    Friend WithEvents gb_C As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents cob_MenusOnDrive As ComboBox
+    Friend WithEvents L_MenusOnDrive As Label
 End Class
