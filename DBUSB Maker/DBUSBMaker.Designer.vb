@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class DBSUBMaker
+Partial Class DBUSBMaker
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -35,6 +35,16 @@ Partial Class DBSUBMaker
         Me.rb_EZFormat = New System.Windows.Forms.RadioButton()
         Me.gb_Qemu = New System.Windows.Forms.GroupBox()
         Me.gb_Devices = New System.Windows.Forms.GroupBox()
+        Me.L_DriveInterfaceType = New System.Windows.Forms.Label()
+        Me.L_DriveMeidaType = New System.Windows.Forms.Label()
+        Me.L_DriveIndex = New System.Windows.Forms.Label()
+        Me.L_DriveSize = New System.Windows.Forms.Label()
+        Me.L_Drive_Label = New System.Windows.Forms.Label()
+        Me.L_Capacity = New System.Windows.Forms.Label()
+        Me.L_MediaType = New System.Windows.Forms.Label()
+        Me.L_InterfaceType = New System.Windows.Forms.Label()
+        Me.L_Caption = New System.Windows.Forms.Label()
+        Me.L_Index = New System.Windows.Forms.Label()
         Me.pb_CurrentDevice = New System.Windows.Forms.PictureBox()
         Me.cob_RemovableDrives = New System.Windows.Forms.ComboBox()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
@@ -49,7 +59,6 @@ Partial Class DBSUBMaker
         Me.TabControl_GRUB = New System.Windows.Forms.TabControl()
         Me.Menus = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.gb_Format.SuspendLayout()
         Me.gb_Qemu.SuspendLayout()
         Me.gb_Devices.SuspendLayout()
@@ -79,7 +88,7 @@ Partial Class DBSUBMaker
         Me.gb_Format.Controls.Add(Me.b_FormatDrive)
         Me.gb_Format.Controls.Add(Me.rb_ADFormat)
         Me.gb_Format.Controls.Add(Me.rb_EZFormat)
-        Me.gb_Format.Location = New System.Drawing.Point(12, 305)
+        Me.gb_Format.Location = New System.Drawing.Point(12, 324)
         Me.gb_Format.Name = "gb_Format"
         Me.gb_Format.Size = New System.Drawing.Size(214, 145)
         Me.gb_Format.TabIndex = 1
@@ -180,7 +189,7 @@ Partial Class DBSUBMaker
         'gb_Qemu
         '
         Me.gb_Qemu.Controls.Add(Me.b_Qemu)
-        Me.gb_Qemu.Location = New System.Drawing.Point(12, 249)
+        Me.gb_Qemu.Location = New System.Drawing.Point(12, 268)
         Me.gb_Qemu.Name = "gb_Qemu"
         Me.gb_Qemu.Size = New System.Drawing.Size(214, 50)
         Me.gb_Qemu.TabIndex = 2
@@ -189,26 +198,137 @@ Partial Class DBSUBMaker
         '
         'gb_Devices
         '
+        Me.gb_Devices.Controls.Add(Me.L_DriveInterfaceType)
+        Me.gb_Devices.Controls.Add(Me.L_DriveMeidaType)
+        Me.gb_Devices.Controls.Add(Me.L_DriveIndex)
+        Me.gb_Devices.Controls.Add(Me.L_DriveSize)
+        Me.gb_Devices.Controls.Add(Me.L_Drive_Label)
+        Me.gb_Devices.Controls.Add(Me.L_Capacity)
+        Me.gb_Devices.Controls.Add(Me.L_MediaType)
+        Me.gb_Devices.Controls.Add(Me.L_InterfaceType)
+        Me.gb_Devices.Controls.Add(Me.L_Caption)
+        Me.gb_Devices.Controls.Add(Me.L_Index)
         Me.gb_Devices.Controls.Add(Me.pb_CurrentDevice)
         Me.gb_Devices.Controls.Add(Me.cob_RemovableDrives)
         Me.gb_Devices.Location = New System.Drawing.Point(12, 35)
         Me.gb_Devices.Name = "gb_Devices"
-        Me.gb_Devices.Size = New System.Drawing.Size(214, 208)
+        Me.gb_Devices.Size = New System.Drawing.Size(214, 227)
         Me.gb_Devices.TabIndex = 3
         Me.gb_Devices.TabStop = False
         Me.gb_Devices.Text = "Device Selector"
         '
+        'L_DriveInterfaceType
+        '
+        Me.L_DriveInterfaceType.AutoSize = True
+        Me.L_DriveInterfaceType.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveInterfaceType.Location = New System.Drawing.Point(89, 206)
+        Me.L_DriveInterfaceType.Name = "L_DriveInterfaceType"
+        Me.L_DriveInterfaceType.Size = New System.Drawing.Size(37, 13)
+        Me.L_DriveInterfaceType.TabIndex = 11
+        Me.L_DriveInterfaceType.Text = "<N/A>"
+        '
+        'L_DriveMeidaType
+        '
+        Me.L_DriveMeidaType.AutoSize = True
+        Me.L_DriveMeidaType.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveMeidaType.Location = New System.Drawing.Point(89, 186)
+        Me.L_DriveMeidaType.Name = "L_DriveMeidaType"
+        Me.L_DriveMeidaType.Size = New System.Drawing.Size(37, 13)
+        Me.L_DriveMeidaType.TabIndex = 10
+        Me.L_DriveMeidaType.Text = "<N/A>"
+        '
+        'L_DriveIndex
+        '
+        Me.L_DriveIndex.AutoSize = True
+        Me.L_DriveIndex.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveIndex.Location = New System.Drawing.Point(89, 166)
+        Me.L_DriveIndex.Name = "L_DriveIndex"
+        Me.L_DriveIndex.Size = New System.Drawing.Size(37, 13)
+        Me.L_DriveIndex.TabIndex = 9
+        Me.L_DriveIndex.Text = "<N/A>"
+        '
+        'L_DriveSize
+        '
+        Me.L_DriveSize.AutoSize = True
+        Me.L_DriveSize.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveSize.Location = New System.Drawing.Point(89, 145)
+        Me.L_DriveSize.Name = "L_DriveSize"
+        Me.L_DriveSize.Size = New System.Drawing.Size(37, 13)
+        Me.L_DriveSize.TabIndex = 8
+        Me.L_DriveSize.Text = "<N/A>"
+        '
+        'L_Drive_Label
+        '
+        Me.L_Drive_Label.AutoSize = True
+        Me.L_Drive_Label.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Drive_Label.Location = New System.Drawing.Point(89, 127)
+        Me.L_Drive_Label.Name = "L_Drive_Label"
+        Me.L_Drive_Label.Size = New System.Drawing.Size(121, 13)
+        Me.L_Drive_Label.TabIndex = 7
+        Me.L_Drive_Label.Text = "<NO DRIVE DETECTED>"
+        '
+        'L_Capacity
+        '
+        Me.L_Capacity.AutoSize = True
+        Me.L_Capacity.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Capacity.Location = New System.Drawing.Point(45, 145)
+        Me.L_Capacity.Name = "L_Capacity"
+        Me.L_Capacity.Size = New System.Drawing.Size(35, 13)
+        Me.L_Capacity.TabIndex = 6
+        Me.L_Capacity.Text = "Size:"
+        '
+        'L_MediaType
+        '
+        Me.L_MediaType.AutoSize = True
+        Me.L_MediaType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_MediaType.Location = New System.Drawing.Point(6, 206)
+        Me.L_MediaType.Name = "L_MediaType"
+        Me.L_MediaType.Size = New System.Drawing.Size(77, 13)
+        Me.L_MediaType.TabIndex = 5
+        Me.L_MediaType.Text = "Media Type:"
+        '
+        'L_InterfaceType
+        '
+        Me.L_InterfaceType.AutoSize = True
+        Me.L_InterfaceType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_InterfaceType.Location = New System.Drawing.Point(18, 186)
+        Me.L_InterfaceType.Name = "L_InterfaceType"
+        Me.L_InterfaceType.Size = New System.Drawing.Size(62, 13)
+        Me.L_InterfaceType.TabIndex = 4
+        Me.L_InterfaceType.Text = "Interface:"
+        '
+        'L_Caption
+        '
+        Me.L_Caption.AutoSize = True
+        Me.L_Caption.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Caption.Location = New System.Drawing.Point(38, 127)
+        Me.L_Caption.Name = "L_Caption"
+        Me.L_Caption.Size = New System.Drawing.Size(42, 13)
+        Me.L_Caption.TabIndex = 3
+        Me.L_Caption.Text = "Label:"
+        '
+        'L_Index
+        '
+        Me.L_Index.AutoSize = True
+        Me.L_Index.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Index.Location = New System.Drawing.Point(41, 166)
+        Me.L_Index.Name = "L_Index"
+        Me.L_Index.Size = New System.Drawing.Size(42, 13)
+        Me.L_Index.TabIndex = 2
+        Me.L_Index.Text = "Index:"
+        '
         'pb_CurrentDevice
         '
-        Me.pb_CurrentDevice.Location = New System.Drawing.Point(6, 46)
+        Me.pb_CurrentDevice.Location = New System.Drawing.Point(77, 46)
         Me.pb_CurrentDevice.Name = "pb_CurrentDevice"
-        Me.pb_CurrentDevice.Size = New System.Drawing.Size(201, 156)
+        Me.pb_CurrentDevice.Size = New System.Drawing.Size(64, 64)
         Me.pb_CurrentDevice.TabIndex = 1
         Me.pb_CurrentDevice.TabStop = False
         '
         'cob_RemovableDrives
         '
         Me.cob_RemovableDrives.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cob_RemovableDrives.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cob_RemovableDrives.FormattingEnabled = True
         Me.cob_RemovableDrives.Location = New System.Drawing.Point(6, 19)
         Me.cob_RemovableDrives.Name = "cob_RemovableDrives"
@@ -247,6 +367,7 @@ Partial Class DBSUBMaker
         '
         'OptionsToolStripMenuItem
         '
+        Me.OptionsToolStripMenuItem.CheckOnClick = True
         Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AllowDiskDrivesToolStripMenuItem})
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
         Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
@@ -254,6 +375,7 @@ Partial Class DBSUBMaker
         '
         'AllowDiskDrivesToolStripMenuItem
         '
+        Me.AllowDiskDrivesToolStripMenuItem.CheckOnClick = True
         Me.AllowDiskDrivesToolStripMenuItem.Name = "AllowDiskDrivesToolStripMenuItem"
         Me.AllowDiskDrivesToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.AllowDiskDrivesToolStripMenuItem.Text = "Allow Disk Drives"
@@ -274,7 +396,6 @@ Partial Class DBSUBMaker
         '
         'gr_GRUBEditor
         '
-        Me.gr_GRUBEditor.Controls.Add(Me.Button1)
         Me.gr_GRUBEditor.Controls.Add(Me.TabControl_GRUB)
         Me.gr_GRUBEditor.Location = New System.Drawing.Point(233, 35)
         Me.gr_GRUBEditor.Name = "gr_GRUBEditor"
@@ -314,32 +435,24 @@ Partial Class DBSUBMaker
         Me.TabPage2.Text = "Color Editor"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(130, 127)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DBSUBMaker
+        'DBUSBMaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(849, 462)
+        Me.ClientSize = New System.Drawing.Size(849, 481)
         Me.Controls.Add(Me.gr_GRUBEditor)
         Me.Controls.Add(Me.gb_Devices)
         Me.Controls.Add(Me.gb_Qemu)
         Me.Controls.Add(Me.gb_Format)
         Me.Controls.Add(Me.MenuStrip)
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Name = "DBSUBMaker"
+        Me.Name = "DBUSBMaker"
         Me.Text = "DBSUBMaker"
         Me.gb_Format.ResumeLayout(False)
         Me.gb_Format.PerformLayout()
         Me.gb_Qemu.ResumeLayout(False)
         Me.gb_Devices.ResumeLayout(False)
+        Me.gb_Devices.PerformLayout()
         CType(Me.pb_CurrentDevice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
@@ -377,5 +490,14 @@ Partial Class DBSUBMaker
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents pb_CurrentDevice As PictureBox
     Friend WithEvents cob_RemovableDrives As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents L_Index As Label
+    Friend WithEvents L_Capacity As Label
+    Friend WithEvents L_MediaType As Label
+    Friend WithEvents L_InterfaceType As Label
+    Friend WithEvents L_Caption As Label
+    Friend WithEvents L_DriveInterfaceType As Label
+    Friend WithEvents L_DriveMeidaType As Label
+    Friend WithEvents L_DriveIndex As Label
+    Friend WithEvents L_DriveSize As Label
+    Friend WithEvents L_Drive_Label As Label
 End Class

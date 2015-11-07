@@ -75,13 +75,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBSUBMaker.Designer.vb">
-      <DependentUpon>DBSUBMaker.vb</DependentUpon>
+    <Compile Include="DBUSBMaker.Designer.vb">
+      <DependentUpon>DBUSBMaker.vb</DependentUpon>
     </Compile>
-    <Compile Include="DBSUBMaker.vb">
+    <Compile Include="DBUSBMaker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_Generator.vb" />
+    <Compile Include="Modules\DriveDetection.vb" />
+    <Compile Include="Modules\Menu_Generator.vb" />
+    <Compile Include="Modules\QEMU_Fbinst.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,8 +101,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBSUBMaker.resx">
-      <DependentUpon>DBSUBMaker.vb</DependentUpon>
+    <EmbeddedResource Include="DBUSBMaker.resx">
+      <DependentUpon>DBUSBMaker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

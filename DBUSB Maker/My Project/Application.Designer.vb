@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.DBUSB_Maker.DBSUBMaker
+            Me.MainForm = Global.DBUSB_Maker.DBUSBMaker
         End Sub
     End Class
 End Namespace

@@ -13,3 +13,14 @@ D:\Files\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.exe.config
 D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.exe
 D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.xml
 D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.pdb
+D:\Files\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.exe
+D:\Files\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.pdb
+D:\Files\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.xml
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.vbprojResolveAssemblyReference.cache
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB_Maker.Resources.resources
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.vbproj.GenerateResource.Cache
+D:\Files\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB_Maker.DBUSBMaker.resources
+C:\Users\Deyu\Google Drive\Programming\DBUSB Maker\bin\Release\DBUSB Maker.exe.config
+C:\Users\Deyu\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.exe
+C:\Users\Deyu\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.xml
+C:\Users\Deyu\Google Drive\Programming\DBUSB Maker\obj\Release\DBUSB Maker.pdb

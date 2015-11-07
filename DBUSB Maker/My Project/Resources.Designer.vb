@@ -81,6 +81,35 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Ico_USB() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ico_USB", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to default 2
+        '''timeout 30
+        '''
+        '''title DBUSB - MAIN MENU
+        '''root
+        '''
+        '''title    &gt;&gt; Shutdown
+        '''halt
+        '''
+        '''title    &gt;&gt; Restart \n\nLoool
+        '''reboot.
+        '''</summary>
+        Friend ReadOnly Property Menu() As String
+            Get
+                Return ResourceManager.GetString("Menu", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
         Friend ReadOnly Property qemuBiosBin() As Byte()
