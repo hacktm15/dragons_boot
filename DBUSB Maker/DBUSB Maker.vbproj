@@ -128,11 +128,12 @@
     <None Include="Resources\Qemu\bios.bin" />
     <None Include="Resources\Qemu\vgabios.bin" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Fbinst\fbinst.exe" />
+    <None Include="Resources\Icons\Ico_HDD.png" />
+    <None Include="Resources\Icons\Ico_NotFound.png" />
+    <None Include="Resources\Icons\Ico_USB.png" />
     <Content Include="Resources\Qemu\qemu.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

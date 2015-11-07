@@ -36,10 +36,10 @@ Partial Class DBUSBMaker
         Me.gb_Qemu = New System.Windows.Forms.GroupBox()
         Me.gb_Devices = New System.Windows.Forms.GroupBox()
         Me.L_DriveInterfaceType = New System.Windows.Forms.Label()
-        Me.L_DriveMeidaType = New System.Windows.Forms.Label()
+        Me.L_DriveMediaType = New System.Windows.Forms.Label()
         Me.L_DriveIndex = New System.Windows.Forms.Label()
         Me.L_DriveSize = New System.Windows.Forms.Label()
-        Me.L_Drive_Label = New System.Windows.Forms.Label()
+        Me.L_DriveLabel = New System.Windows.Forms.Label()
         Me.L_Capacity = New System.Windows.Forms.Label()
         Me.L_MediaType = New System.Windows.Forms.Label()
         Me.L_InterfaceType = New System.Windows.Forms.Label()
@@ -70,6 +70,7 @@ Partial Class DBUSBMaker
         '
         'b_Qemu
         '
+        Me.b_Qemu.Enabled = False
         Me.b_Qemu.Location = New System.Drawing.Point(6, 19)
         Me.b_Qemu.Name = "b_Qemu"
         Me.b_Qemu.Size = New System.Drawing.Size(202, 23)
@@ -157,6 +158,7 @@ Partial Class DBUSBMaker
         '
         'b_FormatDrive
         '
+        Me.b_FormatDrive.Enabled = False
         Me.b_FormatDrive.Location = New System.Drawing.Point(6, 112)
         Me.b_FormatDrive.Name = "b_FormatDrive"
         Me.b_FormatDrive.Size = New System.Drawing.Size(202, 23)
@@ -199,10 +201,10 @@ Partial Class DBUSBMaker
         'gb_Devices
         '
         Me.gb_Devices.Controls.Add(Me.L_DriveInterfaceType)
-        Me.gb_Devices.Controls.Add(Me.L_DriveMeidaType)
+        Me.gb_Devices.Controls.Add(Me.L_DriveMediaType)
         Me.gb_Devices.Controls.Add(Me.L_DriveIndex)
         Me.gb_Devices.Controls.Add(Me.L_DriveSize)
-        Me.gb_Devices.Controls.Add(Me.L_Drive_Label)
+        Me.gb_Devices.Controls.Add(Me.L_DriveLabel)
         Me.gb_Devices.Controls.Add(Me.L_Capacity)
         Me.gb_Devices.Controls.Add(Me.L_MediaType)
         Me.gb_Devices.Controls.Add(Me.L_InterfaceType)
@@ -221,21 +223,21 @@ Partial Class DBUSBMaker
         '
         Me.L_DriveInterfaceType.AutoSize = True
         Me.L_DriveInterfaceType.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_DriveInterfaceType.Location = New System.Drawing.Point(89, 206)
+        Me.L_DriveInterfaceType.Location = New System.Drawing.Point(89, 187)
         Me.L_DriveInterfaceType.Name = "L_DriveInterfaceType"
         Me.L_DriveInterfaceType.Size = New System.Drawing.Size(37, 13)
         Me.L_DriveInterfaceType.TabIndex = 11
         Me.L_DriveInterfaceType.Text = "<N/A>"
         '
-        'L_DriveMeidaType
+        'L_DriveMediaType
         '
-        Me.L_DriveMeidaType.AutoSize = True
-        Me.L_DriveMeidaType.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_DriveMeidaType.Location = New System.Drawing.Point(89, 186)
-        Me.L_DriveMeidaType.Name = "L_DriveMeidaType"
-        Me.L_DriveMeidaType.Size = New System.Drawing.Size(37, 13)
-        Me.L_DriveMeidaType.TabIndex = 10
-        Me.L_DriveMeidaType.Text = "<N/A>"
+        Me.L_DriveMediaType.AutoSize = True
+        Me.L_DriveMediaType.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveMediaType.Location = New System.Drawing.Point(89, 207)
+        Me.L_DriveMediaType.Name = "L_DriveMediaType"
+        Me.L_DriveMediaType.Size = New System.Drawing.Size(37, 13)
+        Me.L_DriveMediaType.TabIndex = 10
+        Me.L_DriveMediaType.Text = "<N/A>"
         '
         'L_DriveIndex
         '
@@ -257,15 +259,15 @@ Partial Class DBUSBMaker
         Me.L_DriveSize.TabIndex = 8
         Me.L_DriveSize.Text = "<N/A>"
         '
-        'L_Drive_Label
+        'L_DriveLabel
         '
-        Me.L_Drive_Label.AutoSize = True
-        Me.L_Drive_Label.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Drive_Label.Location = New System.Drawing.Point(89, 127)
-        Me.L_Drive_Label.Name = "L_Drive_Label"
-        Me.L_Drive_Label.Size = New System.Drawing.Size(121, 13)
-        Me.L_Drive_Label.TabIndex = 7
-        Me.L_Drive_Label.Text = "<NO DRIVE DETECTED>"
+        Me.L_DriveLabel.AutoSize = True
+        Me.L_DriveLabel.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DriveLabel.Location = New System.Drawing.Point(89, 127)
+        Me.L_DriveLabel.Name = "L_DriveLabel"
+        Me.L_DriveLabel.Size = New System.Drawing.Size(121, 13)
+        Me.L_DriveLabel.TabIndex = 7
+        Me.L_DriveLabel.Text = "<NO DRIVE DETECTED>"
         '
         'L_Capacity
         '
@@ -319,6 +321,7 @@ Partial Class DBUSBMaker
         '
         'pb_CurrentDevice
         '
+        Me.pb_CurrentDevice.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_NotFound
         Me.pb_CurrentDevice.Location = New System.Drawing.Point(77, 46)
         Me.pb_CurrentDevice.Name = "pb_CurrentDevice"
         Me.pb_CurrentDevice.Size = New System.Drawing.Size(64, 64)
@@ -496,8 +499,8 @@ Partial Class DBUSBMaker
     Friend WithEvents L_InterfaceType As Label
     Friend WithEvents L_Caption As Label
     Friend WithEvents L_DriveInterfaceType As Label
-    Friend WithEvents L_DriveMeidaType As Label
+    Friend WithEvents L_DriveMediaType As Label
     Friend WithEvents L_DriveIndex As Label
     Friend WithEvents L_DriveSize As Label
-    Friend WithEvents L_Drive_Label As Label
+    Friend WithEvents L_DriveLabel As Label
 End Class

@@ -24,3 +24,14 @@ D:\Drive\Programming\DBUSB Maker\bin\Debug\DBUSB Maker.exe.config
 D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.exe
 D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.xml
 D:\Drive\Programming\DBUSB Maker\obj\Debug\DBUSB Maker.pdb
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\bin\Debug\DBUSB Maker.exe.config
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB Maker.exe
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB Maker.xml
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB Maker.pdb
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\bin\Debug\DBUSB Maker.exe
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\bin\Debug\DBUSB Maker.pdb
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\bin\Debug\DBUSB Maker.xml
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB Maker.vbprojResolveAssemblyReference.cache
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB_Maker.DBUSBMaker.resources
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB_Maker.Resources.resources
+C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Debug\DBUSB Maker.vbproj.GenerateResource.Cache

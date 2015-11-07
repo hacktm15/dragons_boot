@@ -38,11 +38,23 @@
         SelectedDriveInterfaceType = DriveInterfaceType(DriveListIndex)
         SelectedDriveMediaType = DriveMediaType(DriveListIndex)
 
-        L_Drive_Label.Text = SelectedDriveCaption.Substring(0, 19)
+        If SelectedDriveCaption.Length() > 19 Then
+            L_DriveLabel.Text = SelectedDriveCaption.Substring(0, 19)
+        Else
+            L_DriveLabel.Text = SelectedDriveCaption
+        End If
+
         L_DriveSize.Text = SelectedDriveSize
         L_DriveIndex.Text = SelectedDriveIndex
-        L_DriveMeidaType.Text = SelectedDriveMediaType
+        L_DriveMediaType.Text = SelectedDriveMediaType
         L_DriveInterfaceType.Text = SelectedDriveInterfaceType
+
+        If L_DriveInterfaceType.Text.Contains("USB") Then
+            pb_CurrentDevice.Image = My.Resources.Ico_USB
+        ElseIf SelectedDriveInterfaceType Like "IDE" Then
+            pb_CurrentDevice.Image = My.Resources.Ico_HDD
+        End If
+
     End Sub
 
     ' Allow to select a filesystem only when MBR Formatting is wanted
@@ -87,7 +99,6 @@
     Private Sub AllowDiskDrivesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllowDiskDrivesToolStripMenuItem.Click
         DriveDetection.Detect()
     End Sub
-
     ' Quits the Application
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
@@ -106,5 +117,11 @@
     Private Sub b_Qemu_Click(sender As Object, e As EventArgs) Handles b_Qemu.Click
         QEMU_Fbinst.Run_Qemu(SelectedDriveIndex)
     End Sub
+
+    Private Sub pb_CurrentDevice_BackgroundImageChanged(sender As Object, e As EventArgs) Handles pb_CurrentDevice.BackgroundImageChanged
+        MsgBox("Yo")
+    End Sub
+
+    ' If no device is selcted, block the QEMU and Format Buttons
 
 End Class

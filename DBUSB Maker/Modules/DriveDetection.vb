@@ -61,8 +61,21 @@
         objWMIService = Nothing
 
         If NrDrives > 0 Then
+            DBUSBMaker.cob_RemovableDrives.Enabled = True
             DBUSBMaker.cob_RemovableDrives.Sorted = True
             DBUSBMaker.cob_RemovableDrives.SelectedIndex = 0
+            DBUSBMaker.b_FormatDrive.Enabled = True
+            DBUSBMaker.b_Qemu.Enabled = True
+        Else
+            DBUSBMaker.cob_RemovableDrives.Enabled = False
+            DBUSBMaker.pb_CurrentDevice.Image = My.Resources.Ico_NotFound
+            DBUSBMaker.b_FormatDrive.Enabled = False
+            DBUSBMaker.b_Qemu.Enabled = False
+            DBUSBMaker.L_DriveLabel.Text = "<N/A>"
+            DBUSBMaker.L_DriveSize.Text = "<N/A>"
+            DBUSBMaker.L_DriveIndex.Text = "<N/A>"
+            DBUSBMaker.L_DriveInterfaceType.Text = "<N/A>"
+            DBUSBMaker.L_DriveMediaType.Text = "<N/A>"
         End If
 
     End Sub

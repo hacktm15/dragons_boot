@@ -32,6 +32,21 @@ DBUSB Maker
   Looks up a localized resource of type System.Byte[].
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_HDD">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_NotFound">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_USB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Menu">
 <summary>
   Looks up a localized string similar to default 2
