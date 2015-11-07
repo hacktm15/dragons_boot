@@ -1,11 +1,9 @@
 # dragons_boot
 Bootable USB Maker
 
-Dragon's Boot is a PC Diagnosics USB Kit, and this program is meant to take any removable media storage and format it
-in order to make it bootable. It has a GUI that blends together the formatting tool (fbinst), a vitual machine for
-testing the USB (QEMU). Planned but not in the scope of this hackathon is the ability to burn the USB with an image of a MasterUSB.
+This program is a bootable USB Setup All-In-One. It features MBR Formatting, Grub4Dos installer, QEMU Virtual Machine Testing, and essential files and folders are automatically created. This setup can be done manually, for free, but requires downloading several (open source) programs that work with terminal commands, and can be time consuming to gather everything you need, learn to use them, then neatly put everything together. This very small executable does everything for you, with a simple and intuitive user interface, all in under 30 seconds! It's a great time saver if you want to make bootable drives for your friends or just make extra copies for yourself in no time!
 
 TL;DR:
 - Format any Storage Device and make it bootable
 - Test any Bootable Device in a Virtual Machine
-- GUI enabled Menu editing for GRUB4DOS
+- Automatically Create Useful Files and Folders
