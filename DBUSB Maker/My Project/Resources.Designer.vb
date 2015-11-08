@@ -71,11 +71,11 @@ Namespace My.Resources
         '''title
         '''root
         '''
-        '''title     ¯ Boot Windows (AUTO)\n
+        '''title     &gt;&gt; Boot Windows (AUTO)\n
         '''find --set-root --ignore-floppies --ignore-cd /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr || rootnoverify (hd0) &amp;&amp; chainloader +1 &amp;&amp; boot
         '''map () (hd0) &amp;&amp; map (hd0) () &amp;&amp; map --rehook
         '''find --set-root --devices=h /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr
-        '''chainloader /bootmgr || chainloa [rest of string was truncated]&quot;;.
+        '''chainloader /bootmgr || chainlo [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property BootLST() As String
             Get
@@ -110,6 +110,40 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("grldr", resourceCulture)
                 Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property HDAT2_IMA() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("HDAT2_IMA", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to default 2
+        '''color black/light-gray white/black light-gray/black light-gray/black
+        '''title HDD TESTING TOOLS:
+        '''root
+        '''
+        '''title STORAGE TESTING TOOLS
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title     &gt;&gt; HDAT2 v4.9 BETA 1\n\n The main functions of this program are to test and repair (regenerate) bad\n sectors for detected devices. Supports ATA/ATAPI/SATA/SCSI/USB devices.
+        '''find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz
+        '''map --mem /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz (fd0)
+        '''map --hook
+        '''chainloader  [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property HddtoolsLST() As String
+            Get
+                Return ResourceManager.GetString("HddtoolsLST", resourceCulture)
             End Get
         End Property
         
@@ -264,11 +298,64 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Memtest86_5_01() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Memtest86_5_01", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Memtest86_6_2_0() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Memtest86_6_2_0", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to timeout 30
+        '''default 3
+        '''color black/light-gray white/black light-gray/black light-gray/black
+        '''
+        '''title MEMORY TESTING TOOLS:
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title     &gt;&gt; MemTest86+  (v.5.01)\n\n MemTest86+ v5.01 is designed to test and stress-test RAM. It verifies that the\n RAM will accept and retain arbitrary patterns of data and that there are no\n errors and no conflicts between memory addresses.
+        '''find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/MEMTOOLS/Memtest86+5.01.ISO
+        '''map --mem /DBUSB/IMAGES/MEMT [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property MemtoolsLST() As String
+            Get
+                Return ResourceManager.GetString("MemtoolsLST", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to color black/light-gray white/black light-gray/black light-gray/black
         '''timeout 30
-        '''default 5
+        '''default 14
         '''
         '''title DBUSB - Main Menu
+        '''root
+        '''
+        '''title
+        '''root
+        '''
+        '''title     &gt;&gt; Memory Testing Tools
+        '''configfile /DBUSB/IMAGES/MEMTOOLS/Memtools.LST
+        '''
+        '''title     &gt;&gt; Storage Testing Tools
+        '''configfile /DBUSB/IMAGES/HDDTOOLS/Hddtools.LST
+        '''
+        '''title
         '''root
         '''
         '''title
@@ -298,13 +385,7 @@ Namespace My.Resources
         '''title     Power Options
         '''root
         '''
-        '''title     ¯ Boot Manager ...\n\n Allows you to choose a Hard Disk and/or partition to boot from ...
-        '''configfile /DBUSB/IMAGES/Menus/Boot.LST
-        '''
-        '''title     ¯ Restart System ...\n\n Restart System ...
-        '''reboot
-        '''
-        '''title     ¯ Shutdown S [rest of string was truncated]&quot;;.
+        '''title     &gt;&gt; Boot Manager ... [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property MenuLST() As String
             Get

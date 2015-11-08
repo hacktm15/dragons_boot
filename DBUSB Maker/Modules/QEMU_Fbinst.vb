@@ -56,15 +56,21 @@ Public Module QEMU_Fbinst
     End Sub
 
     Public Sub Run_Fbinst(ByRef SelectedDriveIndex)
-        ' Is it different?
 
+        ' Is it different?
         If Application.ExecutablePath.Substring(0, 3) = SelectedDrivePartitions.Substring(0, 3) Then
             MsgBox("You cannot format this drive because DBUSB Maker runs from it. Choose another drive, or move the application to another drive and retry.")
             Exit Sub
         End If
 
         ' Warn about data loss!
-        Dim response As Integer = MsgBox("WARNING!!!" & vbCrLf & "Formatting will cause all data on the device to be lost. Are you sure you want to format drive " & SelectedDriveIndex & "?", MsgBoxStyle.YesNo, "Formatting Prompt")
+        Dim response As Integer
+        If DBUSBMaker.cb_Format_Repartition.Checked = True Then
+            response = MsgBox("WARNING!!!" & vbCrLf & "Reormatting will cause all data on the device to be lost. Are you sure you want to format drive " & SelectedDriveIndex & "?", MsgBoxStyle.YesNo, "Formatting Prompt")
+        Else
+            response = MsgBox("WARNING!!!" & vbCrLf & "Your data will not be deleted, but it's recommended you backup important files. Are you sure you wish to continue?", MsgBoxStyle.YesNo, "Formatting Prompt")
+        End If
+
         If response = MsgBoxResult.Yes Then
             ' Copy necessary files to temp
             My.Computer.FileSystem.CreateDirectory(TempPath + "DBUSB\Maker\Fbinst\")
@@ -138,14 +144,45 @@ Public Module QEMU_Fbinst
 
             Shell("cmd.exe /c " & TempPath.Substring(0, 2) & " & cd %temp%\DBUSB\Maker\Fbinst & " & FormatCommand & " & " & GrldrCommand & " & " & MenuCommand, AppWinStyle.Hide, True)
 
-            ' Create Default Folders
-            Shell("cmd.exe /c " & SelectedDrivePartitions.Substring(0, 2) & " & mkdir DBUSB\IMAGES", AppWinStyle.Hide, True)
+            ' Create Default Files and Folders
+            If DBUSBMaker.cb_Format_AddFiles.Checked Then
+                Shell("cmd.exe /c " & SelectedDrivePartitions.Substring(0, 2) & " & mkdir DBUSB\IMAGES\MEMTOOLS", AppWinStyle.Hide, True)
+                Shell("cmd.exe /c " & SelectedDrivePartitions.Substring(0, 2) & " & mkdir DBUSB\IMAGES\HDDTOOLS", AppWinStyle.Hide, True)
 
-            IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Menu.lst", My.Resources.MenuLST)
-            IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Boot.lst", My.Resources.BootLST)
+                IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Menu.lst", My.Resources.MenuLST)
+                IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\Boot.lst", My.Resources.BootLST)
+                IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\MEMTOOLS\Memtools.lst", My.Resources.MemtoolsLST)
+                IO.File.WriteAllText(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\HDDTOOLS\Hddtools.lst", My.Resources.HddtoolsLST)
+
+                FileToWrite = "Memtest86-6.2.0.iso"
+                BytesToWrite = My.Resources.Memtest86_6_2_0()
+                FileStream = New IO.FileStream(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\MEMTOOLS\" & FileToWrite, System.IO.FileMode.OpenOrCreate)
+                BinaryWriter = New System.IO.BinaryWriter(FileStream)
+                BinaryWriter.Write(BytesToWrite)
+                FileStream.Close()
+                BinaryWriter.Close()
+
+                FileToWrite = "Memtest86+5.01.iso"
+                BytesToWrite = My.Resources.Memtest86_5_01()
+                FileStream = New IO.FileStream(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\MEMTOOLS\" & FileToWrite, System.IO.FileMode.OpenOrCreate)
+                BinaryWriter = New System.IO.BinaryWriter(FileStream)
+                BinaryWriter.Write(BytesToWrite)
+                FileStream.Close()
+                BinaryWriter.Close()
+
+                FileToWrite = "HDAT2.IMA.gz"
+                BytesToWrite = My.Resources.HDAT2_IMA()
+                FileStream = New IO.FileStream(SelectedDrivePartitions.Substring(0, 3) & "DBUSB\IMAGES\HDDTOOLS\" & FileToWrite, System.IO.FileMode.OpenOrCreate)
+                BinaryWriter = New System.IO.BinaryWriter(FileStream)
+                BinaryWriter.Write(BytesToWrite)
+                FileStream.Close()
+                BinaryWriter.Close()
+
+            End If
 
             MsgBox("Done!")
             DBUSBMaker.Enabled = True
+
         End If
     End Sub
 

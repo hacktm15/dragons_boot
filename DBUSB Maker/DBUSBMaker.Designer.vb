@@ -36,6 +36,8 @@ Partial Class DBUSBMaker
         Me.rb_EZFormat = New System.Windows.Forms.RadioButton()
         Me.gb_Qemu = New System.Windows.Forms.GroupBox()
         Me.gb_Devices = New System.Windows.Forms.GroupBox()
+        Me.L_DrivePartitions = New System.Windows.Forms.Label()
+        Me.L_Partitions = New System.Windows.Forms.Label()
         Me.L_DriveInterfaceType = New System.Windows.Forms.Label()
         Me.L_DriveMediaType = New System.Windows.Forms.Label()
         Me.L_DriveIndex = New System.Windows.Forms.Label()
@@ -57,8 +59,7 @@ Partial Class DBUSBMaker
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.L_Partitions = New System.Windows.Forms.Label()
-        Me.L_DrivePartitions = New System.Windows.Forms.Label()
+        Me.cb_Format_AddFiles = New System.Windows.Forms.CheckBox()
         Me.gb_Format.SuspendLayout()
         Me.gb_Qemu.SuspendLayout()
         Me.gb_Devices.SuspendLayout()
@@ -81,6 +82,7 @@ Partial Class DBUSBMaker
         '
         'gb_Format
         '
+        Me.gb_Format.Controls.Add(Me.cb_Format_AddFiles)
         Me.gb_Format.Controls.Add(Me.cob_Format_type)
         Me.gb_Format.Controls.Add(Me.cb_Format_USBZip)
         Me.gb_Format.Controls.Add(Me.cb_Format_CHS)
@@ -92,7 +94,7 @@ Partial Class DBUSBMaker
         Me.gb_Format.Controls.Add(Me.rb_EZFormat)
         Me.gb_Format.Location = New System.Drawing.Point(12, 350)
         Me.gb_Format.Name = "gb_Format"
-        Me.gb_Format.Size = New System.Drawing.Size(214, 145)
+        Me.gb_Format.Size = New System.Drawing.Size(214, 165)
         Me.gb_Format.TabIndex = 1
         Me.gb_Format.TabStop = False
         Me.gb_Format.Text = "Format USB"
@@ -162,7 +164,7 @@ Partial Class DBUSBMaker
         Me.b_FormatDrive.Enabled = False
         Me.b_FormatDrive.Image = Global.DBUSB_Maker.My.Resources.Resources.Ico_Format
         Me.b_FormatDrive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.b_FormatDrive.Location = New System.Drawing.Point(6, 112)
+        Me.b_FormatDrive.Location = New System.Drawing.Point(6, 136)
         Me.b_FormatDrive.Name = "b_FormatDrive"
         Me.b_FormatDrive.Size = New System.Drawing.Size(202, 23)
         Me.b_FormatDrive.TabIndex = 2
@@ -223,6 +225,26 @@ Partial Class DBUSBMaker
         Me.gb_Devices.TabIndex = 3
         Me.gb_Devices.TabStop = False
         Me.gb_Devices.Text = "Device Selector"
+        '
+        'L_DrivePartitions
+        '
+        Me.L_DrivePartitions.AutoSize = True
+        Me.L_DrivePartitions.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_DrivePartitions.Location = New System.Drawing.Point(89, 227)
+        Me.L_DrivePartitions.Name = "L_DrivePartitions"
+        Me.L_DrivePartitions.Size = New System.Drawing.Size(37, 13)
+        Me.L_DrivePartitions.TabIndex = 13
+        Me.L_DrivePartitions.Text = "<N/A>"
+        '
+        'L_Partitions
+        '
+        Me.L_Partitions.AutoSize = True
+        Me.L_Partitions.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Partitions.Location = New System.Drawing.Point(3, 227)
+        Me.L_Partitions.Name = "L_Partitions"
+        Me.L_Partitions.Size = New System.Drawing.Size(84, 15)
+        Me.L_Partitions.TabIndex = 12
+        Me.L_Partitions.Text = "Partitions:"
         '
         'L_DriveInterfaceType
         '
@@ -347,6 +369,8 @@ Partial Class DBUSBMaker
         '
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip.MaximumSize = New System.Drawing.Size(233, 24)
+        Me.MenuStrip.MinimumSize = New System.Drawing.Size(233, 24)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(233, 24)
         Me.MenuStrip.TabIndex = 4
@@ -408,38 +432,28 @@ Partial Class DBUSBMaker
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(13, 501)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 521)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(209, 50)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
-        'L_Partitions
+        'cb_Format_AddFiles
         '
-        Me.L_Partitions.AutoSize = True
-        Me.L_Partitions.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Partitions.Location = New System.Drawing.Point(3, 227)
-        Me.L_Partitions.Name = "L_Partitions"
-        Me.L_Partitions.Size = New System.Drawing.Size(84, 15)
-        Me.L_Partitions.TabIndex = 12
-        Me.L_Partitions.Text = "Partitions:"
-        '
-        'L_DrivePartitions
-        '
-        Me.L_DrivePartitions.AutoSize = True
-        Me.L_DrivePartitions.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_DrivePartitions.Location = New System.Drawing.Point(89, 227)
-        Me.L_DrivePartitions.Name = "L_DrivePartitions"
-        Me.L_DrivePartitions.Size = New System.Drawing.Size(37, 13)
-        Me.L_DrivePartitions.TabIndex = 13
-        Me.L_DrivePartitions.Text = "<N/A>"
+        Me.cb_Format_AddFiles.AutoSize = True
+        Me.cb_Format_AddFiles.Location = New System.Drawing.Point(7, 113)
+        Me.cb_Format_AddFiles.Name = "cb_Format_AddFiles"
+        Me.cb_Format_AddFiles.Size = New System.Drawing.Size(177, 17)
+        Me.cb_Format_AddFiles.TabIndex = 8
+        Me.cb_Format_AddFiles.Text = "Add Basic Menus and Programs"
+        Me.cb_Format_AddFiles.UseVisualStyleBackColor = True
         '
         'DBUSBMaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(233, 563)
+        Me.ClientSize = New System.Drawing.Size(233, 583)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.gb_Devices)
         Me.Controls.Add(Me.gb_Qemu)
@@ -447,8 +461,12 @@ Partial Class DBUSBMaker
         Me.Controls.Add(Me.MenuStrip)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(249, 622)
+        Me.MinimumSize = New System.Drawing.Size(249, 622)
         Me.Name = "DBUSBMaker"
-        Me.Text = "DBSUBMaker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "USB Maker"
         Me.gb_Format.ResumeLayout(False)
         Me.gb_Format.PerformLayout()
         Me.gb_Qemu.ResumeLayout(False)
@@ -499,4 +517,5 @@ Partial Class DBUSBMaker
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents L_DrivePartitions As Label
     Friend WithEvents L_Partitions As Label
+    Friend WithEvents cb_Format_AddFiles As CheckBox
 End Class

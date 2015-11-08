@@ -8,11 +8,11 @@ root
 title
 root
 
-title
-root
+title     >> Memory Testing Tools
+configfile /DBUSB/IMAGES/MEMTOOLS/Memtools.LST
 
-title
-root
+title     >> Storage Testing Tools
+configfile /DBUSB/IMAGES/HDDTOOLS/Hddtools.LST
 
 title
 root

@@ -35,3 +35,14 @@ C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Release\DBUSB Maker.vbprojResolveAss
 C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Release\DBUSB_Maker.DBUSBMaker.resources
 C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Release\DBUSB_Maker.Resources.resources
 C:\Users\Deyu\Desktop\DBUSB\DBUSB Maker\obj\Release\DBUSB Maker.vbproj.GenerateResource.Cache
+C:\Users\Deyu\Desktop\D-10-23\bin\Release\DBUSB Maker.exe.config
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB Maker.exe
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB Maker.xml
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB Maker.pdb
+C:\Users\Deyu\Desktop\D-10-23\bin\Release\DBUSB Maker.exe
+C:\Users\Deyu\Desktop\D-10-23\bin\Release\DBUSB Maker.pdb
+C:\Users\Deyu\Desktop\D-10-23\bin\Release\DBUSB Maker.xml
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB Maker.vbprojResolveAssemblyReference.cache
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB_Maker.DBUSBMaker.resources
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB_Maker.Resources.resources
+C:\Users\Deyu\Desktop\D-10-23\obj\Release\DBUSB Maker.vbproj.GenerateResource.Cache

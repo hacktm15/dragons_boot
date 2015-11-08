@@ -1,0 +1,27 @@
+timeout 30
+default 3
+color black/light-gray white/black light-gray/black light-gray/black
+
+title MEMORY TESTING TOOLS:
+root
+
+title
+root
+
+title     >> MemTest86+  (v.5.01)\n\n MemTest86+ v5.01 is designed to test and stress-test RAM. It verifies that the\n RAM will accept and retain arbitrary patterns of data and that there are no\n errors and no conflicts between memory addresses.
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/MEMTOOLS/Memtest86+5.01.ISO
+map --mem /DBUSB/IMAGES/MEMTOOLS/Memtest86+5.01.ISO (0xff)
+map --hook
+chainloader (0xff)
+
+title     >> MemTest86  (v.6.2.0)\n\n MemTest86 by PassMark is a free, thorough, stand alone memory test\n for x86 architecture computers.
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/MEMTOOLS/Memtest86-6.2.0.ISO
+map --mem /DBUSB/IMAGES/MEMTOOLS/Memtest86-6.2.0.ISO (0xff)
+map --hook
+chainloader (0xff)
+
+title
+root
+
+title     >> Back to Main Menu ...\n\n Returns you to the main menu ...
+configfile /DBUSB/IMAGES/Menu.LST

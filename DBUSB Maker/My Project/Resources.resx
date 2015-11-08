@@ -187,4 +187,19 @@
   <data name="MenuLST" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DBUSB Basic\Menu.LST;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="HddtoolsLST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBUSB Basic\Hddtools.LST;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Memtest86_5_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBUSB Basic\Memtest86+5.01.iso;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Memtest86_6_2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBUSB Basic\Memtest86-6.2.0.iso;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MemtoolsLST" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBUSB Basic\Memtools.LST;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="HDAT2_IMA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBUSB Basic\HDAT2.IMA.gz;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

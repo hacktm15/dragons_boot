@@ -22,14 +22,68 @@ DBUSB Maker
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.BootLST">
+<summary>
+  Looks up a localized string similar to color black/light-gray white/black light-gray/black light-gray/black
+timeout 30
+default 2
+
+title BOOT FROM HARD DISK
+root
+
+title
+root
+
+title     &gt;&gt; Boot Windows (AUTO)\n
+find --set-root --ignore-floppies --ignore-cd /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr || rootnoverify (hd0) &amp;&amp; chainloader +1 &amp;&amp; boot
+map () (hd0) &amp;&amp; map (hd0) () &amp;&amp; map --rehook
+find --set-root --devices=h /bootmgr || find --set-root --ignore-floppies --ignore-cd /ntldr
+chainloader /bootmgr || chainlo [rest of string was truncated]&quot;;.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.fbinstExe">
 <summary>
   Looks up a localized resource of type System.Byte[].
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Gif_Loading">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.grldr">
 <summary>
   Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.HDAT2_IMA">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.HddtoolsLST">
+<summary>
+  Looks up a localized string similar to default 2
+color black/light-gray white/black light-gray/black light-gray/black
+title HDD TESTING TOOLS:
+root
+
+title STORAGE TESTING TOOLS
+root
+
+title
+root
+
+title     &gt;&gt; HDAT2 v4.9 BETA 1\n\n The main functions of this program are to test and repair (regenerate) bad\n sectors for detected devices. Supports ATA/ATAPI/SATA/SCSI/USB devices.
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz
+map --mem /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz (fd0)
+map --hook
+chainloader  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_DBUSB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Exit">
@@ -57,6 +111,11 @@ DBUSB Maker
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Main">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_Manual">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -68,11 +127,6 @@ DBUSB Maker
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.Ico_NotFound">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_NotFound1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -97,19 +151,87 @@ DBUSB Maker
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:DBUSB_Maker.My.Resources.Resources.Menu">
+<member name="P:DBUSB_Maker.My.Resources.Resources.Ico_VM">
 <summary>
-  Looks up a localized string similar to default 2
-timeout 30
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Memtest86_5_01">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.Memtest86_6_2_0">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.MemtoolsLST">
+<summary>
+  Looks up a localized string similar to timeout 30
+default 3
+color black/light-gray white/black light-gray/black light-gray/black
 
-title DBUSB - MAIN MENU
+title MEMORY TESTING TOOLS:
 root
 
-title    &gt;&gt; Shutdown
-halt
+title
+root
 
-title    &gt;&gt; Restart \n\nLoool
-reboot.
+title     &gt;&gt; MemTest86+  (v.5.01)\n\n MemTest86+ v5.01 is designed to test and stress-test RAM. It verifies that the\n RAM will accept and retain arbitrary patterns of data and that there are no\n errors and no conflicts between memory addresses.
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/MEMTOOLS/Memtest86+5.01.ISO
+map --mem /DBUSB/IMAGES/MEMT [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:DBUSB_Maker.My.Resources.Resources.MenuLST">
+<summary>
+  Looks up a localized string similar to color black/light-gray white/black light-gray/black light-gray/black
+timeout 30
+default 14
+
+title DBUSB - Main Menu
+root
+
+title
+root
+
+title     &gt;&gt; Memory Testing Tools
+configfile /DBUSB/IMAGES/MEMTOOLS/Memtools.LST
+
+title     &gt;&gt; Storage Testing Tools
+configfile /DBUSB/IMAGES/HDDTOOLS/Hddtools.LST
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title
+root
+
+title     Power Options
+root
+
+title     &gt;&gt; Boot Manager ... [rest of string was truncated]&quot;;.
 </summary>
 </member>
 <member name="P:DBUSB_Maker.My.Resources.Resources.qemuBiosBin">

@@ -17,15 +17,18 @@
             cb_Format_Align.Checked = False
             cb_Format_CHS.Checked = False
             cb_Format_USBZip.Checked = False
+            cb_Format_AddFiles.Checked = False
             cb_Format_Repartition.Enabled = False
             cb_Format_Align.Enabled = False
             cb_Format_CHS.Enabled = False
             cb_Format_USBZip.Enabled = False
+            cb_Format_AddFiles.Enabled = False
         Else
             cb_Format_Repartition.Enabled = True
             cb_Format_Align.Enabled = True
             cb_Format_CHS.Enabled = True
             cb_Format_USBZip.Enabled = True
+            cb_Format_AddFiles.Enabled = True
         End If
     End Sub
 
@@ -77,6 +80,7 @@
             cb_Format_Align.Checked = True
             cb_Format_CHS.Checked = True
             cb_Format_USBZip.Checked = False
+            cb_Format_AddFiles.Checked = True
             cob_Format_type.SelectedItem = "Fat 32"
 
             ' Lock them into place.
@@ -85,7 +89,9 @@
             cb_Format_Align.Enabled = False
             cb_Format_CHS.Enabled = False
             cb_Format_USBZip.Enabled = False
+            cb_Format_AddFiles.Enabled = False
             cob_Format_type.Enabled = False
+
         Else
             ' Unlock options for custom setup
             cb_Format_MBR.Enabled = True
@@ -93,6 +99,7 @@
             cb_Format_Align.Enabled = True
             cb_Format_CHS.Enabled = True
             cb_Format_USBZip.Enabled = True
+            cb_Format_AddFiles.Enabled = True
             cob_Format_type.Enabled = True
         End If
     End Sub

@@ -1,0 +1,25 @@
+default 3
+color black/light-gray white/black light-gray/black light-gray/black
+title HDD TESTING TOOLS:
+root
+
+title STORAGE TESTING TOOLS
+root
+
+title
+root
+
+title     >> HDAT2 v4.9 BETA 1\n\n The main functions of this program are to test and repair (regenerate) bad\n sectors for detected devices. Supports ATA/ATAPI/SATA/SCSI/USB devices.
+find --set-root --ignore-floppies --ignore-cd /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz
+map --mem /DBUSB/IMAGES/HDDTOOLS/HDAT2.IMA.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+boot
+
+title
+root
+
+title     >> Back to Main Menu\n                                                                                 Returns you to the main menu ...
+configfile /DBUSB/IMAGES/Menu.LST
